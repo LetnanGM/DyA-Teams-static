@@ -1,0 +1,25 @@
+{
+  "name": "dya-teams",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vituum/vite-plugin-nunjucks": "^2.0.1",
+    "sass-embedded": "^1.105.0",
+    "vite": "^8.3.0",
+    "vituum": "^2.0.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.8",
+    "fontawesome": "^5.6.3",
+    "nunjucks": "^3.2.4",
+    "scss": "^0.2.4"
+  }
+}

@@ -1,0 +1,74 @@
+{% macro team(profile) %}
+<!-- Looking for Developer -->
+<div class="col-md-4">
+  <article class="team-member text-center p-4 h-100">
+    {% if profile.status %}
+    <!-- Ubah url_for jadi path langsung. Di Vite, taruh gambarmu di folder public/images/ -->
+    <img
+      src="/{{ profile.profil_img }}"
+      alt="{{ profile.name }}"
+      class="mb-4 shadow rounded-circle"
+      width="120"
+      height="120"
+      style="object-fit: cover"
+    />
+    {% else %}
+    <div
+      class="team-placeholder mb-4 mx-auto shadow rounded-circle d-flex align-items-center justify-content-center"
+      style="width: 120px; height: 120px"
+    >
+      <i class="fas fa-user-plus fa-2x"></i>
+    </div>
+    {% endif %}
+
+    <h5 class="mb-1">
+      {% if profile.status %}{{ profile.name }}{% else %}Your Name Here{% endif
+      %}
+    </h5>
+
+    <p class="text-muted mb-3">
+      {% if profile.status %}{{ profile.peran }}{% else %}Future DYA Member{%
+      endif %}
+    </p>
+
+    <p class="small mb-4">
+      {% if profile.status %}{{ profile.shortdesc }}{% else %}We're looking for
+      someone who wants to build, experiment, and create something together.{%
+      endif %}
+    </p>
+
+    <div class="social-links d-flex justify-content-center gap-2">
+      <!-- Ditambah gap-2 biar ikonnya gak sepet/dempet -->
+      {% if profile.status %}
+      <!-- Di data mock kamu, linkedin nilainya "#", kita sembunyikan kalau kosong/hanya "#" -->
+      {% if profile.link.linkedin and profile.link.linkedin != "#" %}
+      <a
+        href="{{ profile.link.linkedin }}"
+        aria-label="{{ profile.name }} on LinkedIn"
+        class="btn btn-sm btn-outline-dark rounded-circle"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      {% endif %}
+
+      <a
+        href="{{ profile.link.github }}"
+        aria-label="{{ profile.name }} on GitHub"
+        class="btn btn-sm btn-outline-dark rounded-circle"
+        target="_blank"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      {% else %}
+      <a
+        href="#"
+        aria-label="Join DYA"
+        class="btn btn-sm btn-dark rounded-circle"
+      >
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      {% endif %}
+    </div>
+  </article>
+</div>
+{% endmacro %}
