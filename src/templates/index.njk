@@ -6,25 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title></title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="/src/static/scss/main.scss" />
     <script type="module" src="/src/static/jslocal/script.js"></script>
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <header>{% include "components/_navbar.njk" %}</header>
+    <header>{% include "./components/_navbar.njk" %}</header>
     <main id="#maincontent">
-      {% include "components/_hero.njk" %} {% include "components/_aboutme.njk"
-      %} {% include "components/_teams.njk" %} {% include
-      "components/_project.njk" %} {% include "components/_statistic.njk" %} {%
-      include "components/_contact.njk" %}
+      {% include "./components/_hero.njk" %} {% include
+      "./components/_aboutme.njk" %} {% include "./components/_teams.njk" %} {%
+      include "./components/_project.njk" %} {% include
+      "./components/_statistic.njk" %} {% include "./components/_contact.njk" %}
     </main>
-    <footer>{% include "layout/_footer.njk" %}</footer>
+    <footer>{% include "./layout/_footer.njk" %}</footer>
   </body>
 </html>

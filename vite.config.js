@@ -10,7 +10,7 @@ export default defineConfig({
 
     // 1. Force the production build to look into your src/templates folder
     rollupOptions: {
-      input: ["./src/templates/**/*.{html,njk,json}"],
+      input: ["./src/templates/*.{html,njk,json}"],
     },
   },
 
@@ -82,8 +82,9 @@ export default defineConfig({
             peran: "Junior WebDev & Beginner Dev",
             shortdesc: "Fokus pada dampak sosial dan kolaborasi",
             link: {
-              github: "https://github.com/LetnanGM",
+              github: "https://github.com/alkhalififaiz75-dot",
               linkedin: "#",
+              instagram: "https://instagram.com/xion63957",
             },
           },
           {
@@ -96,6 +97,7 @@ export default defineConfig({
             link: {
               github: "https://github.com/LetnanGM",
               linkedin: "#",
+              instagram: "https://instagram.com/syafiqueue",
             },
           },
           {
@@ -105,8 +107,9 @@ export default defineConfig({
             peran: "Cyber Security & Founder of IJJ",
             shortdesc: "There's no System is Safe. CyberSec from Indonesia",
             link: {
-              github: "https://github.com/LetnanGM",
+              github: "#",
               linkedin: "#",
+              instagram: "https://instagram.com/iss.notsefuh",
             },
           },
         ],
