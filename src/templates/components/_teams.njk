@@ -2,7 +2,6 @@
 
 <section class="py-5">
   <div class="container">
-    <!-- Section Header -->
     <div class="row text-center mb-5">
       <div class="col-12">
         <h2 class="section-title">Meet Our Team</h2>
@@ -12,9 +11,8 @@
       </div>
     </div>
 
-    <!-- Team Members -->
     <div class="row g-4 justify-content-center">
-      {% for profile in mock_data_team %} {{ team.team(profile) }} {% else %}
+      {% for profile in teams %} {{ team.team(profile) }} {% else %}
       <p class="text-muted">There's have problem to show the developers.</p>
       {% endfor %}
     </div>

@@ -1,7 +1,6 @@
 {% macro card(project) %}
 <div class="col">
   <div class="card h-100 bg-white border border-dark rounded-0">
-    <!-- Thumbnail Image with Grayscale -->
     <img
       src="{{ project.thumb_image }}"
       class="card-img-top rounded-0 border-bottom border-dark"
@@ -19,7 +18,6 @@
         {{ project.shortdesc }}
       </p>
 
-      <!-- Tech Stack Badges -->
       <div class="mb-3">
         {% for tech in project.techstack %}
         <span
@@ -31,7 +29,6 @@
         {% endfor %}
       </div>
 
-      <!-- Action Button -->
       <a
         href="{{ project.linkview }}"
         class="btn btn-dark btn-sm rounded-0 mt-auto w-100 fw-semibold text-uppercase tracking-wider"

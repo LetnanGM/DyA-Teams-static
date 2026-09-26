@@ -38,10 +38,8 @@
     </p>
 
     <div class="social-links d-flex justify-content-center gap-2">
-      <!-- Ditambah gap-2 biar ikonnya gak sepet/dempet -->
-      {% if profile.status %}
-      <!-- Di data mock kamu, linkedin nilainya "#", kita sembunyikan kalau kosong/hanya "#" -->
-      {% if profile.link.linkedin and profile.link.linkedin != "#" %}
+      {% if profile.status %} {% if profile.link.linkedin and
+      profile.link.linkedin != "#" %}
       <a
         href="{{ profile.link.linkedin }}"
         aria-label="{{ profile.name }} on LinkedIn"
@@ -76,9 +74,7 @@
       >
         <i class="fas fa-arrow-right"></i>
       </a>
-      {% endif %}
-      <!-- FIX: Added this missing statement -->
-      {% endif %}
+      {% endif %} {% endif %}
     </div>
   </article>
 </div>

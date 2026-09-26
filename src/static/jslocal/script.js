@@ -1,4 +1,12 @@
-// live clock (WIB)
+/**
+ * Live Clock
+ * ----------
+ *
+ * Builded by Syafiq
+ * MIT License
+ *
+ * Free Modified
+ */
 const clockEl = document.getElementById("clock");
 function updateClock() {
   const opts = {
@@ -15,7 +23,11 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
-// typing / cycling role text
+/**
+ *  typing / cycling role text
+ *
+ *  animation for hero text
+ */
 const words = ["interfaces", "products", "experiences", "ideas"];
 const roleEl = document.getElementById("role-text");
 let wIndex = 0,
@@ -43,7 +55,10 @@ function typeLoop() {
 }
 setTimeout(typeLoop, 1000);
 
-// cursor spotlight
+/**
+ * cursor spotlight :D
+ * i just add it cause i think it cool
+ */
 const hero = document.querySelector(".hero-box");
 const spot = document.getElementById("spotlight");
 hero.addEventListener("mousemove", (e) => {
